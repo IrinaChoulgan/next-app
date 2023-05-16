@@ -1,10 +1,11 @@
 'use client';
 
-import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useProject } from '../Context';
+
 import s from './ProjectInfo.module.css';
 import style from '../FirstStepForm/FirstStepForm.module.css';
-import { useProject } from '../Context';
+
 const ProjectInfo = () => {
   const router = useRouter();
   const { projectInfo } = useProject();

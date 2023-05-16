@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import s from './FirstStepForm.module.css';
 import { useProject } from '../Context';
+
 import Modal from '../Modal/Modal';
+import s from './FirstStepForm.module.css';
 
 const buttons = ['NFT', 'GameFi', 'DeFi', 'DAO', 'SocialFi', 'Metaverse', 'Tools', 'Ecosystem', 'Others'];
 
