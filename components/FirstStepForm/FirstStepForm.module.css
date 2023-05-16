@@ -1,0 +1,292 @@
+.section {
+  padding: 0 120px;
+}
+.container {
+  padding: 0 16px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 72px;
+}
+
+.activeColor {
+  color: #2b8ce6;
+}
+
+.activeWhiteColor {
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .circleText,
+  .cicleTextWhite {
+    display: none;
+  }
+  .line {
+    height: 40px;
+    transform: rotate(90deg);
+  }
+  .btnForm {
+    width: 100%;
+    height: 40px;
+  }
+  .btnBack {
+    margin-right: 16px;
+    min-width: 156.5px;
+  }
+  .btnContinue {
+    min-width: 156.5px;
+  }
+  .btnFormWrapper {
+    display: flex;
+  }
+  .countText {
+    min-width: 200px;
+  }
+  .emailInput {
+    min-width: 328px;
+  }
+  .gradientImg {
+    display: none;
+  }
+}
+.circleWhite {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 0px;
+    min-width: 260px;
+    padding-top: 42px;
+    padding-left: 26px;
+  }
+  .container {
+    padding: 0 60px;
+  }
+  .cicleTextWhite {
+    color: #ffff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 24px;
+    margin-right: 8px;
+  }
+
+  .circleText {
+    margin-right: 8px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 24px;
+  }
+  .circleWhite {
+    margin-right: 8px;
+  }
+  .circle {
+    margin-right: 8px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .line {
+    transform: rotate(180deg);
+    height: 25px;
+    margin-top: -20px;
+    margin-left: 3px;
+  }
+  .wrapperForCicle {
+    display: flex;
+    align-items: baseline;
+  }
+  .globeWrapper {
+    display: flex;
+  }
+  .wrapper {
+    display: block;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .text {
+    margin-top: 100px;
+  }
+  .inputForm {
+    min-width: 680px;
+  }
+  .wrapperButtons {
+    width: 680px;
+  }
+  .btnForm {
+    min-width: 328px;
+  }
+
+  .btnBack {
+    margin-right: 32px;
+    min-width: 120px;
+  }
+
+  .countText {
+    min-width: 151px;
+  }
+  .emailInput {
+    min-width: 680px;
+  }
+  .gradientImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.line {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2b8ce5;
+  margin-bottom: 8px;
+}
+.title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.19;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.labelForm {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.labelForm:last-child {
+  margin-bottom: 12px;
+}
+.inputForm {
+  box-sizing: border-box;
+  background: #101313;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 16px 11px 16px;
+  min-width: 328px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+  margin-bottom: 24px;
+}
+.btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fafafa;
+
+  padding: 6px 12px;
+  min-width: 53px;
+  height: 32px;
+  background: rgba(250, 250, 250, 0.1);
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 12px;
+}
+.btnActive {
+  color: #2b8ce6;
+  background: rgba(33, 122, 255, 0.1);
+}
+
+.btn:not(:last-child) {
+  margin-right: 12px;
+}
+
+.btnForm {
+  box-sizing: border-box;
+  padding: 13px 24px;
+  background: #2b8ce6;
+  border-radius: 10px;
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #101313;
+  margin-top: 12px;
+}
+
+/* 2 level */
+
+.labelRadioForm {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #ffffff;
+
+  margin-right: 8px;
+}
+.radioWrapper {
+  margin-bottom: 26px;
+}
+
+.btnBack {
+  color: #ffff;
+  background: rgba(250, 250, 250, 0.1);
+}
+
+/* 3 level */
+
+.countWrapper {
+  display: flex;
+  margin-bottom: 28px;
+}
+.countBtn {
+  min-width: 48px;
+  min-height: 48px;
+  background: rgba(250, 250, 250, 0.1);
+  border-radius: 10px;
+  border: none;
+
+  padding: 13px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+}
+.countText {
+  background: #101313;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+
+  margin: 0 16px;
+}
+
+.emailInput {
+  background: #101313;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
