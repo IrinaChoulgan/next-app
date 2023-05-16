@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, useState, useEffect, useContext } from 'react';
 
 const Context = createContext();
@@ -5,7 +7,6 @@ const Context = createContext();
 export const useProject = () => useContext(Context);
 
 const ProjectContext = ({ children }) => {
-    
   const [projectInfo, setProjectInfo] = useState(null);
 
   const updateProjectInfo = (newProjectInfo) => {

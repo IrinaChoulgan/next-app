@@ -1,5 +1,6 @@
+'use client';
+
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
 import s from './Modal.module.css';
 import style from '../FirstStepForm/FirstStepForm.module.css';
