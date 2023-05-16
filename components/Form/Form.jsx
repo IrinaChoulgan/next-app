@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Image from 'next/image';
 import { useProject } from '../Context';
 
@@ -40,6 +42,14 @@ const FirstStepForms = () => {
     setStep(step + 1);
   };
 
+  const handleAddProject = () => {
+    if (!name || name === '') {
+      toast.error('Please enter a project name!');
+    } else {
+      setStep(step + 1);
+    }
+  };
+
   const handlePreviousStep = () => {
     setStep(step - 1);
   };
@@ -60,9 +70,18 @@ const FirstStepForms = () => {
 
   const handleFinishedClick = (e) => {
     e.preventDefault();
-    updateProjectInfo(formData);
-    localStorage.setItem('formData', JSON.stringify(formData));
-    setShowModal(true);
+    if (!mail || mail === '') {
+      toast.error('All fields must be filled!', {
+        position: toast.POSITION.TOP_RIGHT
+      });
+      console.log('errormail');
+    } else if (!/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(mail)) {
+      toast.error('Please enter a valid email address!');
+    } else {
+      updateProjectInfo(formData);
+      localStorage.setItem('formData', JSON.stringify(formData));
+      setShowModal(true);
+    }
   };
 
   const handleChange = (e) => {
@@ -170,7 +189,6 @@ const FirstStepForms = () => {
                   className={s.inputForm}
                   id="name"
                   name="name"
-                  required
                   onChange={handleChange}
                   pattern="[A-Za-z0-9\s]+"
                 />
@@ -205,7 +223,7 @@ const FirstStepForms = () => {
                     </button>
                   ))}
                 </div>
-                <button type="submit" className={s.btnForm} onClick={handleNextStep}>
+                <button type="submit" className={s.btnForm} onClick={handleAddProject}>
                   Add Project
                 </button>
               </form>
@@ -350,6 +368,7 @@ const FirstStepForms = () => {
         )}
 
         {showModal && <Modal />}
+        <ToastContainer autoClose={1000} position="top-right" theme="dark" />
 
         <Image
           src="/assets/gradient.png"
