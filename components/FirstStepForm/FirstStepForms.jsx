@@ -19,7 +19,7 @@ const FirstStepForms = () => {
   const [formattedValue, setFormattedValue] = useState('');
   const [projectCategory, setProjectCategory] = useState('NFT');
   const [formData, setFormData] = useState(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.localStorage) {
       const savedData = localStorage.getItem('formData');
       return savedData ? JSON.parse(savedData) : '';
     }
