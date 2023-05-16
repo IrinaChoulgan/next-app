@@ -20,7 +20,7 @@ const FirstStepForms = () => {
   const [projectCategory, setProjectCategory] = useState('NFT');
   const [formData, setFormData] = useState(() => {
     if (typeof window !== 'undefined' && window.localStorage) {
-      const savedData = localStorage.getItem('formData');
+      const savedData = window.localStorage.getItem('formData');
       return savedData ? JSON.parse(savedData) : '';
     }
   });
