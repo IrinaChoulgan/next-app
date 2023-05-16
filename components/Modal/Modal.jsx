@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 
 import s from './Modal.module.css';
-import style from '../FirstStepForm/FirstStepForm.module.css';
+import style from '../Form/Form.module.css';
 
 const Modal = () => {
   const router = useRouter();

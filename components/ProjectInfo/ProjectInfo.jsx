@@ -1,15 +1,15 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { useProject } from '../Context';
 
 import s from './ProjectInfo.module.css';
-import style from '../FirstStepForm/FirstStepForm.module.css';
+import style from '../Form/Form.module.css';
 
 const ProjectInfo = () => {
   const router = useRouter();
   const { projectInfo } = useProject();
-  console.log(projectInfo);
 
   return (
     <div className={s.container}>
@@ -41,7 +41,14 @@ const ProjectInfo = () => {
           Your email: <span className={s.category_text}>{projectInfo?.mail}</span>
         </p>
       </div>
-      <img src="/assets/gradient.png" alt="" className={style.gradientImg} />
+      <Image
+        src="/assets/gradient.png"
+        alt=""
+        className={style.gradientImg}
+        width={260}
+        height={160}
+        priority
+      />
     </div>
   );
 };

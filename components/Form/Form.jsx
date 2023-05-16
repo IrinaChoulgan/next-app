@@ -1,16 +1,22 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { useProject } from '../Context';
 
+import {
+  defaultUrlStyle,
+  dynamicUrlStyle,
+  dynamicActiveStyle,
+  defaultBackgroundlStyle,
+  dynamicBackgroundStyle,
+  activeBackcroundStyle,
+  buttons
+} from './dynamicStyle';
 import Modal from '../Modal/Modal';
-import s from './FirstStepForm.module.css';
-
-const buttons = ['NFT', 'GameFi', 'DeFi', 'DAO', 'SocialFi', 'Metaverse', 'Tools', 'Ecosystem', 'Others'];
+import s from './Form.module.css';
 
 const FirstStepForms = () => {
-  const router = useRouter();
   const { projectInfo, updateProjectInfo } = useProject();
 
   const [name, setName] = useState('');
@@ -52,31 +58,11 @@ const FirstStepForms = () => {
     }));
   }, [projectCategory, count, mail, name, formattedValue]);
 
-  const defaultUrlStyle = {
-    color: 'rgba(255, 255, 255, 0.3)'
-  };
-  const dynamicUrlStyle = {
-    color: 'white'
-  };
-  const dynamicActiveStyle = {
-    color: '#2b8ce6'
-  };
-
-  const defaultBackgroundlStyle = {
-    background: 'rgba(255, 255, 255, 0.3)'
-  };
-  const dynamicBackgroundStyle = {
-    background: 'white'
-  };
-  const activeBackcroundStyle = {
-    background: '#2b8ce6'
-  };
-
   const handleFinishedClick = (e) => {
+    e.preventDefault();
     updateProjectInfo(formData);
     localStorage.setItem('formData', JSON.stringify(formData));
     setShowModal(true);
-    e.preventDefault();
   };
 
   const handleChange = (e) => {
@@ -89,7 +75,6 @@ const FirstStepForms = () => {
   };
 
   const handleRadioChange = (e) => {
-    console.log(e.target.value);
     setFormData((prevFormData) => ({
       ...prevFormData,
       [e.target.name]: e.target.value
@@ -300,11 +285,11 @@ const FirstStepForms = () => {
               <h2 className={s.title}>How many full-time workers on the project?</h2>
               <form onSubmit={handleFormSubmit}>
                 <div className={s.countWrapper}>
-                  <button onClick={clickOnDecrement} className={s.countBtn}>
+                  <button onClick={clickOnDecrement} className={s.countBtn} type="button">
                     -
                   </button>
                   <p className={s.countText}>{count}</p>
-                  <button onClick={clickOnIncrement} className={s.countBtn}>
+                  <button onClick={clickOnIncrement} className={s.countBtn} type="button">
                     +
                   </button>
                 </div>
@@ -366,7 +351,14 @@ const FirstStepForms = () => {
 
         {showModal && <Modal />}
 
-        <img src="/assets/gradient.png" alt="" className={s.gradientImg} />
+        <Image
+          src="/assets/gradient.png"
+          alt="gradient"
+          className={s.gradientImg}
+          width={260}
+          height={160}
+          priority
+        />
       </div>
     </div>
   );

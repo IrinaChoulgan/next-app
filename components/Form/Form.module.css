@@ -31,7 +31,6 @@
   }
   .btnForm {
     width: 100%;
-    height: 40px;
   }
   .btnBack {
     margin-right: 16px;
@@ -200,7 +199,7 @@
 
   padding: 6px 12px;
   min-width: 53px;
-  height: 32px;
+  height: auto;
   background: rgba(250, 250, 250, 0.1);
   border-radius: 16px;
   border: none;
