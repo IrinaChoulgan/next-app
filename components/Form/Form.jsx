@@ -245,7 +245,7 @@ const FirstStepForms = () => {
                     value="Grow My Community"
                     onChange={handleRadioChange}
                   />
-                  <label htmlFor="Grow My Community" className={s.labelRadioForm}>
+                  <label htmlFor="growCommunity" className={s.labelRadioForm}>
                     Grow My Community
                   </label>
                 </div>
@@ -258,7 +258,7 @@ const FirstStepForms = () => {
                     value="Activate Existing Members"
                     onChange={handleRadioChange}
                   />
-                  <label htmlFor="activeMembers" className={s.labelRadioForm}>
+                  <label htmlFor="members" className={s.labelRadioForm}>
                     Activate Existing Members
                   </label>
                 </div>
