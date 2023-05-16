@@ -6,7 +6,7 @@ import s from './FirstStepForm.module.css';
 import { useProject } from '../Context';
 import Modal from '../Modal/Modal';
 
-const buttons = ['NFT', 'GameFi', 'DeFi', 'DAO', 'Ecosystem', 'Others', 'SocialFi', 'Metaverse', 'Metaverse'];
+const buttons = ['NFT', 'GameFi', 'DeFi', 'DAO', 'SocialFi', 'Metaverse', 'Tools', 'Ecosystem', 'Others'];
 
 const FirstStepForms = () => {
   const router = useRouter();
